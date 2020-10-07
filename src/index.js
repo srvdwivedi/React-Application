@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+let details = {
+  name : "sourav",
+  lname : "dwivedi",
+  company : "AUW",
+}
+
+function Hello(props) {
+ return ( 
+   <div> 
+    <h1> Welcome to {props.team}</h1>
+ <p> Lets build something {props.message}</p>
+   </div>
+ )
+}
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+  <Hello team="Gurgoan" message="Great"/>,
   document.getElementById('root')
 );
 
